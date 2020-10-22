@@ -2,6 +2,7 @@ package dashboard;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
@@ -24,6 +25,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -39,6 +41,8 @@ public class DashboardController implements Initializable{
 	private double yoffset = 0;
 	@FXML
 	public static String ac = LoginScreenController.acc;
+	@FXML
+	private Pane dashboard_main;
 	@FXML
 	private Text name;
 	@FXML
@@ -122,6 +126,12 @@ public class DashboardController implements Initializable{
 		LoginScreenController.stage.setX(event.getSceneX()-xoffset);
 		LoginScreenController.stage.setY(event.getSceneY()-yoffset);
 		
+	}
+	@FXML
+	public void accountInformation(MouseEvent event) throws IOException{
+		Parent fxml = FXMLLoader.load(getClass().getResource("/accountInfo/AccountInformation.fxml"));
+		dashboard_main.getChildren().removeAll();
+		dashboard_main.getChildren().addAll(fxml);
 	}
 	
 	

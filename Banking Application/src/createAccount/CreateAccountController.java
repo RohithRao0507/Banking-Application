@@ -74,7 +74,7 @@ public class CreateAccountController implements Initializable{
 	ObservableList<String> list = FXCollections.observableArrayList("Male","Female","Other");
 	ObservableList<String> list1 = FXCollections.observableArrayList("Single","Married");
 	ObservableList<String> list2 = FXCollections.observableArrayList("Hindu","Muslim","Buddhist","Christian","Others");
-	ObservableList<String> list3 = FXCollections.observableArrayList("Saving Account","Current Account");
+	ObservableList<String> list3 = FXCollections.observableArrayList("Savings","Current");
 	ObservableList<String> list4 = FXCollections.observableArrayList("What is your pet name?","What is your father's birth place?","What is your brother's nick name?");
 	
 	@FXML
@@ -106,7 +106,7 @@ public class CreateAccountController implements Initializable{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","");
-			String sql = "INSERT INTO userdata (Name, AadharNo, MobileNo, Gender, Religion, MartialStatus, DOB, City, Address, AccountNo, PIN, AccountType, Balance, SecurityQuestion, Answer, ProfilePic) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO userdata (Name, AadharNo, MobileNo, Gender,MartialStatus, Religion, DOB, City, Address, AccountNo, PIN, AccountType, Balance, SecurityQuestion, Answer, ProfilePic) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
 			
 			ps.setString(1, name.getText());

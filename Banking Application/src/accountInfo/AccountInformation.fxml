@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountInfo.AccountInformationController">
+   <children>
+      <AnchorPane fx:id="account_information" prefHeight="551.0" prefWidth="760.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutY="59.0" prefHeight="240.0" prefWidth="190.0" style="-fx-background-color: A6DBF4;">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #4CBAF1;" text="Account No" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Constantia" size="30.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="16.0" />
+                     </padding>
+                  </Label>
+                  <Circle fill="#a6dbf4" layoutX="95.0" layoutY="127.0" radius="65.0" stroke="#4cbaf1" strokeType="INSIDE" strokeWidth="3.0" />
+                  <Label layoutY="211.0" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #4CBAF1;" />
+                  <Text fx:id="account_no" fill="WHITE" layoutX="47.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000000">
+                     <font>
+                        <Font name="Impact" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="190.0" layoutY="59.0" prefHeight="240.0" prefWidth="190.0" style="-fx-background-color: #F7D9A9;">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #FFC669;" text="Gender" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Constantia" size="30.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="47.0" />
+                     </padding>
+                  </Label>
+                  <Circle fill="#f7d9a9" layoutX="95.0" layoutY="127.0" radius="65.0" stroke="#ffc669" strokeType="INSIDE" strokeWidth="3.0" />
+                  <Label layoutY="211.0" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #FFC669;" />
+                  <Text fx:id="gender" fill="WHITE" layoutX="65.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Male">
+                     <font>
+                        <Font name="Impact" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="380.0" layoutY="59.0" prefHeight="240.0" prefWidth="190.0" style="-fx-background-color: #F1BDBD;">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #F56D6E;" text="Account Type" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Constantia" size="30.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </Label>
+                  <Circle fill="#f1bdbd" layoutX="95.0" layoutY="127.0" radius="65.0" stroke="#f56d6e" strokeType="INSIDE" strokeWidth="3.0" />
+                  <Label layoutY="211.0" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #F56D6E;" />
+                  <Text fx:id="account_type" fill="WHITE" layoutX="48.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current">
+                     <font>
+                        <Font name="Impact" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="570.0" layoutY="59.0" prefHeight="240.0" prefWidth="190.0" style="-fx-background-color: #7fcdcf;">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #3B8BB0;" text="Religion" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Constantia" size="30.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="42.0" />
+                     </padding>
+                  </Label>
+                  <Circle fill="#7fcdcf" layoutX="95.0" layoutY="127.0" radius="65.0" stroke="#3b8bb0" strokeType="INSIDE" strokeWidth="3.0" />
+                  <Label layoutY="211.0" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: #3B8BB0;" />
+                  <Text fx:id="religion" fill="WHITE" layoutX="59.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hindu">
+                     <font>
+                        <Font name="Impact" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
