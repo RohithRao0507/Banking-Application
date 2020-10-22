@@ -16,15 +16,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.PasswordField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class LoginScreenController implements Initializable {
 
+	@FXML
+	public static Stage stage = null;
+	public static String acc;
 	@FXML
 	private Pane main_area;
 	@FXML
@@ -51,6 +57,8 @@ public class LoginScreenController implements Initializable {
 		main_area.getChildren().addAll(fxml);
 		
 	}
+	
+	
 
 	public void loginAccount(MouseEvent event) {
 		Connection con = null;
@@ -65,15 +73,18 @@ public class LoginScreenController implements Initializable {
 			
 			ps.setString(1, accountno.getText());
 			ps.setString(2, pin.getText());
+			acc = accountno.getText();
 
 			rs = ps.executeQuery();
 			if(rs.next()) {
-				Alert a = new Alert(AlertType.INFORMATION);
-				a.setTitle("Account Created");
-				a.setHeaderText("Login Sucessfully.");
-				a.setResizable(true);
-				a.setContentText(" Design your dashboard and use it.");
-				a.showAndWait();
+				Parent root = FXMLLoader.load(getClass().getResource("/dashboard/Dashboards.fxml"));
+				Scene scene = new Scene(root);
+				scene.getStylesheets().add(getClass().getResource("/LoginScreen/application.css").toExternalForm());
+				Stage stage = new Stage();
+				stage.initStyle(StageStyle.UNDECORATED);
+				stage.setScene(scene);
+				stage.show();
+				this.stage = stage;
 				
 			}
 			else {

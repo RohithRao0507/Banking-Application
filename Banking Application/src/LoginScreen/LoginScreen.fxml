@@ -18,7 +18,7 @@
                <children>
                   <ImageView fitHeight="407.0" fitWidth="265.0" layoutX="77.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../OneDrive/Desktop/logo.png" />
+                        <Image url="@../../../../../eclipse-workspace/Banking%20Application/src/Images/logo.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="107.0" layoutY="390.0" text="Client Software" textFill="#000000f4">
