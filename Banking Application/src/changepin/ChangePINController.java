@@ -83,7 +83,7 @@ public class ChangePINController implements Initializable{
 		}catch(Exception e) {
 			Alert a = new Alert(AlertType.ERROR);
 			a.setTitle("ERROR");
-			a.setHeaderText("ERROR in chanfing PIN.");
+			a.setHeaderText("ERROR in changing PIN.");
 			a.setResizable(true);
 			a.setContentText(" There is some Error. TRY AGAIN!!!"+e.getMessage());
 			a.showAndWait();
