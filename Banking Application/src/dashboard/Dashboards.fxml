@@ -78,7 +78,7 @@
                         <Font name="Constantia" size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutY="493.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Change PIN">
+                  <Button layoutY="493.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" onMouseClicked="#PinChange" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Change PIN">
                      <font>
                         <Font name="Constantia" size="18.0" />
                      </font>
