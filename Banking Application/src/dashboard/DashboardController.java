@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 import LoginScreen.LoginScreenController;
 import LoginScreen.Loginscreen;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,6 +33,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.scene.Node;
 
 
 public class DashboardController implements Initializable {
@@ -152,6 +154,38 @@ public class DashboardController implements Initializable {
 		dashboard_main.getChildren().addAll(fxml);
 	}
 	
+	public void logout(MouseEvent event) throws IOException {
+		((Node)event.getSource()).getScene().getWindow().hide();
+		Parent root = FXMLLoader.load(getClass().getResource("/LoginScreen/LoginScreen.fxml"));
+		Scene scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("/LoginScreen/application.css").toExternalForm());
+		Stage stage = new Stage();
+		stage.initStyle(StageStyle.UNDECORATED);
+		stage.setScene(scene);
+		stage.show();
+		root.setOnMousePressed(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent arg0) {
+				
+				xoffset = arg0.getSceneX();
+				yoffset = arg0.getSceneY();
+				
+			}
+			
+		});
+		
+		root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent arg0) {
+				stage.setX(arg0.getSceneX()-xoffset);
+				stage.setY(arg0.getSceneY()-yoffset);
+			}
+			
+		});
+		
+	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -162,7 +196,7 @@ public class DashboardController implements Initializable {
 			
 			e.printStackTrace();
 		}
-		Loginscreen.stage.close();
+		
 		
 	}
 

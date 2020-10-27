@@ -15,6 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -45,7 +46,7 @@ public class LoginScreenController implements Initializable {
 	}
 	@FXML
 	private void createAccount(MouseEvent event) throws IOException {
-		Parent fxml = FXMLLoader.load(getClass().getResource("/createAccount/CreateAccount.fxml"));
+		Parent fxml =  FXMLLoader.load(getClass().getResource("/createAccount/CreateAccount.fxml"));
 		main_area.getChildren().removeAll();
 		main_area.getChildren().addAll(fxml);
 		
@@ -77,6 +78,7 @@ public class LoginScreenController implements Initializable {
 
 			rs = ps.executeQuery();
 			if(rs.next()) {
+				((Node)event.getSource()).getScene().getWindow().hide();
 				Parent root = FXMLLoader.load(getClass().getResource("/dashboard/Dashboards.fxml"));
 				Scene scene = new Scene(root);
 				scene.getStylesheets().add(getClass().getResource("/LoginScreen/application.css").toExternalForm());
