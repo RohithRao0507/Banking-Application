@@ -46,6 +46,14 @@
 	-fx-background-color: #313954;
 	
 }
+.dashboard-topbuttons{
+	-fx-background-color:transpparent;
+	-fx-text-fill: white;
+}
+.dashboard-topbuttons:hover{
+	-fx-cursor:hand;
+	-fx-text-fill:red;
+}
 .dashboard-sidebar{
 	-fx-background-color: #424B6C;
 }
@@ -54,8 +62,17 @@
 	-fx-background-color:transparent;
 	-fx-text-fill:white;
 }
+.dashboard-buttons:hover{
+	-fx-cursor:hand;
+}
 .dashboard-btn{
-	-fx-background-color:transparent;
+	-fx-background-color:transpparent;
+	
+}
+.dashboard-btn:hover{
+	-fx-brackgroun-color:black;
+	-fx-cursor:hand;
+	 
 }
 .dashboard-menu{
 	-fx-text-fill:#D3D3D3;
@@ -74,6 +91,7 @@
 	-fx-border-color:#0D8BC5;
 	-fx-border-width: 0px 0px 0px 10px;
 	-fx-background-color:transparernt;
+	-fx-cursor:hand;
 	
 }
 .dashboard-menu:pressed{

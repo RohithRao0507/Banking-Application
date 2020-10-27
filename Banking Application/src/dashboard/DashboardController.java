@@ -34,7 +34,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 
-public class DashboardController implements Initializable{
+public class DashboardController implements Initializable {
 
 	
 	private double xoffset = 0;
@@ -133,11 +133,35 @@ public class DashboardController implements Initializable{
 		dashboard_main.getChildren().removeAll();
 		dashboard_main.getChildren().addAll(fxml);
 	}
+	@FXML
+	public void withdraw(MouseEvent event) throws IOException{
+		Parent fxml = FXMLLoader.load(getClass().getResource("/withdraw/WithdrawAmount.fxml"));
+		dashboard_main.getChildren().removeAll();
+		dashboard_main.getChildren().addAll(fxml);
+	}
+	@FXML
+	public void deposit(MouseEvent event) throws IOException{
+		Parent fxml = FXMLLoader.load(getClass().getResource("/deposit/DepositAmount.fxml"));
+		dashboard_main.getChildren().removeAll();
+		dashboard_main.getChildren().addAll(fxml);
+	}
+	@FXML
+	public void mainScreen() throws IOException{
+		Parent fxml = FXMLLoader.load(getClass().getResource("MainScreen.fxml"));
+		dashboard_main.getChildren().removeAll();
+		dashboard_main.getChildren().addAll(fxml);
+	}
 	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		setData();
+		try {
+			mainScreen();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 		Loginscreen.stage.close();
 		
 	}

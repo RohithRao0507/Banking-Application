@@ -1,4 +1,4 @@
-package accountInfo;
+package deposit;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,14 +7,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class AccountInformation extends Application{
+public class DepositAmount extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
 		
+		
 	try {
 			
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("AccountInformation.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("DepositAmount.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setScene(scene);
@@ -22,6 +23,7 @@ public class AccountInformation extends Application{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public static void main(String[] args) {

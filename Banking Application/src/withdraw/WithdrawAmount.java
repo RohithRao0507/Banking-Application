@@ -1,4 +1,4 @@
-package accountInfo;
+package withdraw;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,14 +7,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class AccountInformation extends Application{
+public class WithdrawAmount extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
 		
-	try {
+		try {
 			
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("AccountInformation.fxml"));
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("WithdrawAmount.fxml"));
 			Scene scene = new Scene(root);
 			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.setScene(scene);

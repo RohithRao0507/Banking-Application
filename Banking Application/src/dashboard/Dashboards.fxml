@@ -17,7 +17,7 @@
          <children>
             <HBox prefHeight="40.0" prefWidth="1000.0" styleClass="dashboard-top" stylesheets="@../LoginScreen/application.css">
                <children>
-                  <Button minWidth="50.0" mnemonicParsing="false" styleClass="dashboard-buttons" stylesheets="@../LoginScreen/application.css" text="RB">
+                  <Button minWidth="50.0" mnemonicParsing="false" styleClass="dashboard-topbuttons" stylesheets="@../LoginScreen/application.css" text="RB">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
@@ -33,14 +33,14 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="min" minWidth="35.0" mnemonicParsing="false" onMouseClicked="#minimizeApp" prefWidth="35.0" styleClass="dashboard-buttons" stylesheets="@../LoginScreen/application.css" text="-">
+                  <Button fx:id="min" minWidth="35.0" mnemonicParsing="false" onMouseClicked="#minimizeApp" prefWidth="35.0" styleClass="dashboard-topbuttons" stylesheets="@../LoginScreen/application.css" text="-">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="445.0" />
                      </HBox.margin></Button>
-                  <Button mnemonicParsing="false" onMouseClicked="#closeApp" prefWidth="35.0" styleClass="dashboard-buttons" stylesheets="@../LoginScreen/application.css" text="X">
+                  <Button mnemonicParsing="false" onMouseClicked="#closeApp" prefWidth="35.0" styleClass="dashboard-topbuttons" stylesheets="@../LoginScreen/application.css" text="X">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
@@ -73,7 +73,7 @@
                         <Font name="Constantia" size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutY="237.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Withdraw">
+                  <Button layoutY="237.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" onMouseClicked="#withdraw" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Withdraw">
                      <font>
                         <Font name="Constantia" size="18.0" />
                      </font>
@@ -93,7 +93,7 @@
                         <Font name="Constantia" size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutY="302.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Deposit">
+                  <Button layoutY="302.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" onMouseClicked="#deposit" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Deposit">
                      <font>
                         <Font name="Constantia" size="18.0" />
                      </font>
@@ -102,24 +102,24 @@
             </Pane>
             <Pane layoutX="240.0" layoutY="40.0" prefHeight="70.0" prefWidth="760.0">
                <children>
-                  <Label layoutX="32.0" layoutY="21.0" text="User Dashboard" textFill="#797979">
+                  <Label layoutX="26.0" layoutY="16.0" text="User Dashboard" textFill="#797979">
                      <font>
-                        <Font name="Constantia Bold" size="24.0" />
+                        <Font name="Constantia Bold" size="32.0" />
                      </font>
                   </Label>
-                  <Button layoutX="584.0" layoutY="21.0" mnemonicParsing="false" styleClass="dashboard-btn" stylesheets="@../LoginScreen/application.css" text="Home" textFill="#797979" underline="true">
+                  <Button layoutX="576.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#mainScreen" styleClass="dashboard-btn" stylesheets="@../LoginScreen/application.css" text="Home" textFill="#797979" underline="true">
                      <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="System Bold" size="19.0" />
                      </font>
                   </Button>
-                  <Button layoutX="659.0" layoutY="18.0" mnemonicParsing="false" styleClass="dashboard-btn" stylesheets="@../LoginScreen/application.css" text="Log Out" textFill="#797979" underline="true">
+                  <Button layoutX="656.0" layoutY="15.0" mnemonicParsing="false" styleClass="dashboard-btn" stylesheets="@../LoginScreen/application.css" text="Log Out" textFill="#797979" underline="true">
                      <font>
-                        <Font name="System Bold" size="15.0" />
+                        <Font name="System Bold" size="19.0" />
                      </font>
                   </Button>
                </children>
             </Pane>
-            <Pane fx:id="dashboard_main" layoutX="240.0" layoutY="110.0" prefHeight="551.0" prefWidth="760.0" />
+            <Pane fx:id="dashboard_main" layoutX="240.0" layoutY="110.0" onMouseClicked="#mainScreen" prefHeight="551.0" prefWidth="760.0" />
          </children>
       </AnchorPane>
    </children>
