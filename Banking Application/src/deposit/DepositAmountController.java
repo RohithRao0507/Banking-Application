@@ -24,7 +24,7 @@ import javafx.scene.control.Alert.AlertType;
 
 public class DepositAmountController implements Initializable{
 	
-	public static String ac = LoginScreenController.acc;
+
 	@FXML
 	private Label account_no;
 	@FXML
@@ -65,7 +65,7 @@ public class DepositAmountController implements Initializable{
 			String sql = "SELECT * FROM userdata WHERE AccountNo=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			
 			rs = ps.executeQuery();
 			
@@ -106,7 +106,7 @@ public class DepositAmountController implements Initializable{
 			String sql = "SELECT * FROM userdata WHERE AccountNo=? and PIN=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			ps.setString(2, pin_field.getText());
 			rs = ps.executeQuery();
 			
@@ -115,13 +115,13 @@ public class DepositAmountController implements Initializable{
 				int ta = Integer.parseInt(balance.getText());
 				
 					int total = ta+da;
-					String sql1 = "UPDATE userdata SET Balance='"+total+"'WHERE AccountNo = '"+ac+"'";
+					String sql1 = "UPDATE userdata SET Balance='"+total+"'WHERE AccountNo = '"+LoginScreenController.acc+"'";
 					ps = con.prepareStatement(sql1);
 					ps.execute();
 					
 					String sql2 ="INSERT INTO deposit(AccountNo, DepositAmount, NewAmount, Date, Time) VALUES (?,?,?,?,?)";
 					ps = con.prepareStatement(sql2);
-					ps.setString(1, ac);
+					ps.setString(1, LoginScreenController.acc);
 					ps.setString(2, String.valueOf(da));
 					ps.setString(3, String.valueOf(total));
 					ps.setString(4, date);

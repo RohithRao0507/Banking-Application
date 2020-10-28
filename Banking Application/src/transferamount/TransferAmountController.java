@@ -28,7 +28,7 @@ public class TransferAmountController implements Initializable{
 	PreparedStatement ps = null;
 	ResultSet rs = null;
 	
-	public static String ac = LoginScreenController.acc;
+
 	@FXML
 	private Label account_no;
 	@FXML
@@ -69,7 +69,7 @@ public class TransferAmountController implements Initializable{
 			String sql = "SELECT * FROM userdata WHERE AccountNo=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			
 			rs = ps.executeQuery();
 			
@@ -154,7 +154,7 @@ public class TransferAmountController implements Initializable{
 			String sql = "SELECT * FROM userdata WHERE AccountNo=? and PIN=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			ps.setString(2, pin_field.getText());
 			
 			rs = ps.executeQuery();
@@ -173,7 +173,7 @@ public class TransferAmountController implements Initializable{
 				}
 				else {
 					int total = ta-transfer_amt;
-					String sql1 = "UPDATE userdata SET Balance='"+total+"'WHERE AccountNo = '"+ac+"'";
+					String sql1 = "UPDATE userdata SET Balance='"+total+"'WHERE AccountNo = '"+LoginScreenController.acc+"'";
 					ps = con.prepareStatement(sql1);
 					ps.execute();
 					
@@ -194,7 +194,7 @@ public class TransferAmountController implements Initializable{
 					
 							String sql5 ="INSERT INTO transfer(AccountNo, Amount, SendTo, Date, Time) VALUES (?,?,?,?,?)";
 							ps = con.prepareStatement(sql5);
-							ps.setString(1, ac);
+							ps.setString(1, LoginScreenController.acc);
 							ps.setString(2, String.valueOf(amt_field.getText()));
 							ps.setString(3, String.valueOf(account_no_field.getText()));
 							ps.setString(4, date);

@@ -12,6 +12,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import LoginScreen.LoginScreenController;
 import LoginScreen.Loginscreen;
 import javafx.application.Platform;
@@ -41,8 +43,8 @@ public class DashboardController implements Initializable {
 	
 	private double xoffset = 0;
 	private double yoffset = 0;
-	@FXML
-	public static String ac = LoginScreenController.acc;
+
+
 	@FXML
 	private Pane dashboard_main;
 	@FXML
@@ -77,8 +79,8 @@ public class DashboardController implements Initializable {
 			String sql = "SELECT * FROM userdata WHERE AccountNo=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
-			
+			ps.setString(1, LoginScreenController.acc);
+			JOptionPane.showMessageDialog(null, "Dashboard: "+LoginScreenController.acc);
 			rs = ps.executeQuery();
 			if(rs.next()) {
 				name.setText(rs.getString("Name"));

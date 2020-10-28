@@ -10,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -75,7 +77,8 @@ public class LoginScreenController implements Initializable {
 			ps.setString(1, accountno.getText());
 			ps.setString(2, pin.getText());
 			acc = accountno.getText();
-
+			// For finding the login Bug..
+//			JOptionPane.showMessageDialog(null, acc);
 			rs = ps.executeQuery();
 			if(rs.next()) {
 				((Node)event.getSource()).getScene().getWindow().hide();

@@ -24,7 +24,7 @@ import javafx.scene.control.TextField;
 
 public class WithdrawAmountController implements Initializable {
 
-	public static String ac = LoginScreenController.acc;
+	
 	@FXML
 	private Label account_no;
 	@FXML
@@ -65,7 +65,7 @@ public class WithdrawAmountController implements Initializable {
 			String sql = "SELECT * FROM userdata WHERE AccountNo=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			
 			rs = ps.executeQuery();
 			
@@ -106,7 +106,7 @@ public class WithdrawAmountController implements Initializable {
 			String sql = "SELECT * FROM userdata WHERE AccountNo=? and PIN=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			ps.setString(2, pin_field.getText());
 			rs = ps.executeQuery();
 			
@@ -124,13 +124,13 @@ public class WithdrawAmountController implements Initializable {
 				}
 				else {
 					int total = ta-wd;
-					String sql1 = "UPDATE userdata SET Balance='"+total+"'WHERE AccountNo = '"+ac+"'";
+					String sql1 = "UPDATE userdata SET Balance='"+total+"'WHERE AccountNo = '"+LoginScreenController.acc+"'";
 					ps = con.prepareStatement(sql1);
 					ps.execute();
 					
 					String sql2 ="INSERT INTO withdraw(AccountNo, WithdrawAmount, RemainingAmount, Date, Time) VALUES (?,?,?,?,?)";
 					ps = con.prepareStatement(sql2);
-					ps.setString(1, ac);
+					ps.setString(1, LoginScreenController.acc);
 					ps.setString(2, String.valueOf(wd));
 					ps.setString(3, String.valueOf(total));
 					ps.setString(4, date);

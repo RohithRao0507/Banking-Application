@@ -17,7 +17,7 @@ import javafx.scene.control.Label;
 public class MainScreenController implements Initializable{
 	
 	
-	public static String ac = LoginScreenController.acc;
+
 	@FXML
 	private Label name;
 	@FXML
@@ -35,7 +35,7 @@ public class MainScreenController implements Initializable{
 			String sql = "SELECT * FROM userdata WHERE AccountNo=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			
 			rs = ps.executeQuery();
 			

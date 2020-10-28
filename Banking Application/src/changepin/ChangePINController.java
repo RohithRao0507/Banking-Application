@@ -28,7 +28,7 @@ public class ChangePINController implements Initializable{
 	
 	
 	DashboardController d = new DashboardController(); 
-	public static String ac = LoginScreenController.acc;
+
 	private ResultSet rs = null;
 	
 	public void changePin(MouseEvent event){
@@ -43,13 +43,13 @@ public class ChangePINController implements Initializable{
 			String sql = "SELECT * FROM userdata WHERE AccountNo=? and PIN=?";
 			ps = con.prepareStatement(sql);
 			
-			ps.setString(1, ac);
+			ps.setString(1, LoginScreenController.acc);
 			ps.setString(2, oldpin.getText());
 			
 			if(rs.next()) {
 				
 				if(newpin.getText().equals(confirmpin.getText())) {
-					String sql1 = "UPDATE userdata SET PIN='"+newpin.getText()+"'WHERE AccountNo = '"+ac+"'";
+					String sql1 = "UPDATE userdata SET PIN='"+newpin.getText()+"'WHERE AccountNo = '"+LoginScreenController.acc+"'";
 					ps = con.prepareStatement(sql1);
 					ps.execute();
 					
