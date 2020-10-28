@@ -20,7 +20,7 @@
                   <Font name="Constantia Bold" size="36.0" />
                </font>
             </Label>
-            <PasswordField fx:id="confirmpin" layoutX="50.0" layoutY="276.0" prefHeight="40.0" prefWidth="300.0" promptText="Confirm PIN">
+            <PasswordField fx:id="confirmpin" layoutX="60.0" layoutY="274.0" prefHeight="40.0" prefWidth="300.0" promptText="Confirm PIN">
                <font>
                   <Font size="18.0" />
                </font>

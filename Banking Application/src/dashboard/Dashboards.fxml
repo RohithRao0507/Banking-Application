@@ -83,7 +83,7 @@
                         <Font name="Constantia" size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutY="431.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Transfer Money">
+                  <Button layoutY="431.0" minHeight="50.0" minWidth="240.0" mnemonicParsing="false" onMouseClicked="#transferAmount" styleClass="dashboard-menu" stylesheets="@../LoginScreen/application.css" text="Transfer Money">
                      <font>
                         <Font name="Constantia" size="18.0" />
                      </font>
