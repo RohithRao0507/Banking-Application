@@ -80,7 +80,7 @@ public class DashboardController implements Initializable {
 			ps = con.prepareStatement(sql);
 			
 			ps.setString(1, LoginScreenController.acc);
-			JOptionPane.showMessageDialog(null, "Dashboard: "+LoginScreenController.acc);
+//			JOptionPane.showMessageDialog(null, "Dashboard: "+LoginScreenController.acc);
 			rs = ps.executeQuery();
 			if(rs.next()) {
 				name.setText(rs.getString("Name"));
