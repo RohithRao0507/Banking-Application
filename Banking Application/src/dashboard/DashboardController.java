@@ -150,6 +150,12 @@ public class DashboardController implements Initializable {
 		dashboard_main.getChildren().addAll(fxml);
 	}
 	@FXML
+	public void transactionHistory(MouseEvent event) throws IOException{
+		Parent fxml = FXMLLoader.load(getClass().getResource("/transactionhistory/TransactionHistory.fxml"));
+		dashboard_main.getChildren().removeAll();
+		dashboard_main.getChildren().addAll(fxml);
+	}
+	@FXML
 	public void PinChange(MouseEvent event) throws IOException{
 		Parent fxml = FXMLLoader.load(getClass().getResource("/changepin/ChangePIN.fxml"));
 		dashboard_main.getChildren().removeAll();
