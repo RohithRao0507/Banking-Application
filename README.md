@@ -1,12 +1,12 @@
 # Banking-Application
-This is a replica of Bank Software, in which you can store the information of a account holder.
+This is a replica of Bank Software, in which you can store the information of an account holder.
 
 
 ### What can this do?
   - Withdraw or deposit the amount into your account
   - Transfer or receive money from others
   - Check your transaction history
-  - Change your password or recover it if you forgot
+  - Change or recover password in case you forgot
 
 ### Software Used
   - Eclipse Ide
