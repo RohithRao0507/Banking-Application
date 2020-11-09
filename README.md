@@ -34,7 +34,7 @@ The main objective of creating this is learning by practical experience. Which I
   <tr>
     <td>Dashboard</td>
     <td>User Informationt</td>
-    <td>Transaction History</td>
+    <td>Changing Password</td>
   </tr>
   <tr>
     <td><img src="ImageFiles/MainPage.png" width=300></td>
@@ -45,9 +45,9 @@ The main objective of creating this is learning by practical experience. Which I
  
  <table>
   <tr>
-    <td>Deposit Screen</td>
-    <td>Withdarw Screen</td>
-    <td>Transfer Screen</td>
+    <td>Deposit window</td>
+    <td>Withdarw window</td>
+    <td>Transfer window</td>
   </tr>
   <tr>
     <td><img src="ImageFiles/DepositPage.png" width=300></td>
@@ -58,12 +58,12 @@ The main objective of creating this is learning by practical experience. Which I
  
   <table>
   <tr>
-    <td>Deposit Screen</td>
-    <td>Withdarw Screen</td>
+    <td>Database</td>
+    <td>Transaction Window</td>
   </tr>
   <tr>
-    <td><img src="ImageFiles/Database.png" width=500></td>
-    <td><img src="ImageFiles/TransactionPage.png" width=500 ></td>
+    <td><img src="ImageFiles/Database.png" width=450></td>
+    <td><img src="ImageFiles/TransactionPage.png" width=450 ></td>
   </tr>
  </table>
  
