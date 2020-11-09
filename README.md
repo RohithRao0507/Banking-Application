@@ -10,7 +10,7 @@ This is a replica of Bank Software, in which you can store the information of an
 
 ### Software Used
   - Eclipse Ide
-  - SceeneBuilder --> for designing
+  - SceeneBuilder --> for designing windows
   - Xampp and phpMyAdmin --> for creating and using local server
 
 ### Reason Behind this.
