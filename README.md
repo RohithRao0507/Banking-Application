@@ -62,8 +62,8 @@ The main objective of creating this is learning by practical experience. Which I
     <td>Transaction Window</td>
   </tr>
   <tr>
-    <td><img src="ImageFiles/Database.png" width=450></td>
-    <td><img src="ImageFiles/TransactionPage.png" width=450 ></td>
+    <td><img src="ImageFiles/Database.png" width=470></td>
+    <td><img src="ImageFiles/TransactionPage.png" width=470 ></td>
   </tr>
  </table>
  
